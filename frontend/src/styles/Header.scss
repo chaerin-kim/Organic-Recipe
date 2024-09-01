@@ -1,0 +1,102 @@
+@import '../styles/App.scss';
+
+header {
+  nav {
+    position: relative;
+    height: 2rem;
+    margin: 4rem 0;
+
+    h1 {
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        width: 18.4rem;
+      }
+    }
+
+    .ham {
+      display: none;
+      position: absolute;
+      right: 6rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      .menu {
+        display: flex;
+        gap: 3rem;
+      }
+      .afterLogin {
+        display: flex;
+        gap: 3rem;
+      }
+      .signIn {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+////반응형 헤더
+@media (max-width: 1000px) {
+  header {
+    nav {
+      margin: 3rem 0;
+      position: relative;
+
+      h1 {
+        img {
+          width: 15rem;
+        }
+      }
+
+      .ham {
+        position: absolute;
+        display: flex;
+        background: none;
+        border: none;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: $spacing-medium;
+        flex-direction: column;
+        gap: $spacing-medium;
+        .menu {
+          flex-direction: column;
+          gap: 1.6rem;
+          align-items: center;
+          li &:hover {
+            color: white;
+          }
+        }
+      }
+
+      ul.open {
+        display: flex;
+        z-index: 3;
+        width: 100%;
+        top: 4rem;
+        background-color: $color-secondary;
+      }
+
+      .afterLogin {
+        padding-top: 1.6rem;
+        border-top: 1px solid $color-text-secondary;
+      }
+    }
+  }
+}

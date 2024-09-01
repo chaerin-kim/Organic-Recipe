@@ -1,0 +1,47 @@
+h2 {
+  padding-top: 4rem;
+}
+.writeCon {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.writeCon label {
+  width: 180px;
+  padding: 1rem;
+}
+.writeCon > input,
+.writeCon > div {
+  box-sizing: border-box;
+  width: calc(100% - 180px - 1rem);
+}
+.writeCon > input {
+  padding: 1rem;
+}
+.writeCon > p {
+  width: 100%;
+  padding-left: 200px;
+  font-size: 0.75rem;
+  color: tomato;
+}
+
+.smallImgCon img {
+  width: 50px;
+}
+
+.submit {
+  margin-top: 3rem;
+}
+
+@media (max-width: 1000px) {
+  .writeCon {
+    flex-direction: column;
+  }
+  .writeCon > input,
+  .writeCon > div {
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.commentsArea {
+  margin-bottom: 10rem;
+}
+
+.commentsArea > div {
+  display: flex;
+  gap: 4rem;
+}
+
+.commentsArea textarea {
+  width: 88%;
+  box-sizing: border-box;
+}
+
+.commentsArea > ul > li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted lightgray;
+}
+.commentArea {
+  justify-content: space-between;
+}
+
+.submitBtn {
+  /* padding: 2rem; */
+  width: 10rem;
+}
+.commentInfo {
+  background-color: #333333;
+  color: white;
+  padding: 1.6rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .commentArea {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .submitBtn {
+    width: 100%;
+  }
+}

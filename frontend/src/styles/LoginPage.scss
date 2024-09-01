@@ -1,0 +1,44 @@
+.register {
+  padding: 100px 0;
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    // border: 1px solid lightblue;
+    max-width: 400px;
+    width: calc(100% - 2rem);
+    margin: auto;
+    text-align: center;
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1.6rem;
+    }
+
+    button {
+      padding: 1.6rem;
+      margin-top: 1.6rem;
+      width: 100%;
+    }
+
+    span {
+      display: block;
+      font-size: 0.8rem;
+      color: tomato;
+      text-align: left;
+      padding-top: 0.25rem;
+    }
+  }
+
+  .registerBox {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    align-items: center;
+  }
+}

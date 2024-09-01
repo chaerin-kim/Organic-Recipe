@@ -1,0 +1,52 @@
+.list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+.listBtns button {
+  margin: 2rem 2rem 0 0;
+  width: 10rem;
+  height: 4rem;
+}
+.btn-secondary.disabled {
+  background-color: grey;
+  color: white;
+}
+
+.content {
+  flex: 1;
+}
+.authorInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.author,
+.date {
+  width: 100px;
+  color: #00462a;
+  font-family: Baskerville;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.date {
+  font-size: 1.6rem;
+}
+
+.editCon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+  padding: 0.5rem;
+}
+
+.editCon textarea {
+  width: calc(100% - 120px - 2rem);
+}

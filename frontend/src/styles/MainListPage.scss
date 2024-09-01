@@ -1,0 +1,343 @@
+@import '../styles/App.scss';
+
+.slideImg {
+  width: 100%;
+}
+
+.swiper-pagination {
+  padding-bottom: 1rem;
+
+  .swiper-pagination-bullet {
+    background: wheat;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: white;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  padding: 0 4rem !important;
+}
+
+.mySwiper {
+  .slideContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .textOverlay {
+    position: absolute;
+    width: 50rem;
+    top: 46%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+
+    h1 {
+      margin: 0 0 1.6rem 0;
+      color: white;
+    }
+    h5 {
+      color: white;
+    }
+    .desc {
+      width: 40rem;
+    }
+  }
+}
+
+.mainList {
+  padding: 5.4rem 0;
+
+  .postsCon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .more {
+    display: block;
+    margin: 4rem auto;
+    text-align: center;
+  }
+}
+
+//// Section2
+.specialty {
+  background-color: $color-grey;
+  padding: 6rem;
+  .spcialtyTitle {
+    text-align: center;
+    line-height: normal;
+  }
+  .specialtyCon {
+    padding: 3rem 0;
+  }
+
+  .swiper {
+    height: 400px;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card {
+          width: 300px;
+          height: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.6s;
+          transform: perspective(800px) rotateY(0deg);
+
+          &:hover {
+            transform: perspective(800px) rotateY(180deg);
+          }
+
+          .card-front,
+          .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            text-align: center;
+            justify-content: center;
+
+            h3 {
+              color: $color-text;
+              font-size: 2rem;
+            }
+            a {
+              color: $color-text;
+              padding-top: 1rem;
+            }
+          }
+
+          .card-front {
+            z-index: 2;
+          }
+
+          .card-back {
+            transform: rotateY(180deg);
+            background-color: $color-secondary;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 35rem;
+          }
+
+          .card-title {
+            font-size: 1.5rem;
+            color: $color-text;
+          }
+        }
+      }
+    }
+
+    .swiper-scrollbar {
+      display: block !important;
+      background: #e0e0e0;
+      height: 0.5rem;
+      margin-top: 2rem;
+
+      .swiper-scrollbar-drag {
+        background: $color-primary !important;
+      }
+    }
+  }
+}
+
+//// Section3
+.shareRecipe {
+  background-color: $color-secondary;
+  .shareCon {
+    padding: 5.4rem 0;
+    text-align: center;
+    color: $color-text;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .shareTxt {
+      display: flex;
+      // width: 494px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-semiMedium;
+      text-align: left;
+      // padding: 0 1rem;
+    }
+    img {
+      padding-left: 2rem;
+      width: 50rem;
+      // height: 261px;
+    }
+  }
+}
+
+//// Section4
+.mealKit {
+  .mealKitCon {
+    padding: 5.4rem 0;
+    gap: 2rem;
+    text-align: center;
+    .mealKitTxt {
+      padding: 3rem 0;
+    }
+  }
+}
+
+//// 반응형 제작
+@media (max-width: 1060px) {
+  .shareRecipe {
+    .shareCon {
+      flex-direction: column;
+      gap: $spacing-semiMedium;
+      img {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+//Slide.jsx 이미지 변경하기
+@media (max-width: 1000px) {
+  .mySwiper .textOverlay {
+    position: absolute;
+    width: 50rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(7, 7, 7, 0.14);
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+//SpecialtySlide - 카드 사이즈 조절
+$breakpoints: (
+  840px: (
+    swiper: 38rem,
+    card-back: 35rem,
+  ),
+  740px: (
+    swiper: 40rem,
+    card-back: 31rem,
+  ),
+  684px: (
+    swiper: 39rem,
+    card-back: 31rem,
+  ),
+  550px: (
+    swiper: 38rem,
+    card-back: 31rem,
+  ),
+  530px: (
+    swiper: 34rem,
+    card-back: 28rem,
+  ),
+
+  494px: (
+    swiper: 34rem,
+    card-back: 26rem,
+  ),
+  470px: (
+    swiper: 32rem,
+    card-back: 22rem,
+  ),
+  466px: (
+    swiper: 28rem,
+    card-back: 24rem,
+  ),
+  428px: (
+    swiper: 26rem,
+    card-back: 22.1rem,
+  ),
+  396px: (
+    swiper: 24rem,
+    card-back: 21.8rem,
+  ),
+  360px: (
+    swiper: 30rem,
+    card-back: 26.2rem,
+  ),
+);
+
+@each $breakpoint, $sizes in $breakpoints {
+  @media (max-width: #{$breakpoint}) {
+    .specialty .swiper {
+      height: map-get($sizes, swiper);
+      .swiper-wrapper .swiper-slide .card .card-back {
+        height: map-get($sizes, card-back);
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .mainList {
+    .postsCon {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 672px) {
+  .mainList {
+    .postsCon {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .mySwiper .textOverlay {
+    width: 25rem;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .shareRecipe {
+    .shareCon {
+      .shareTxt {
+        text-align: center;
+        align-items: center; // 왜 가운데 정렬이 안될까?
+        p {
+          text-align: center;
+        }
+      }
+
+      img {
+        padding-left: 0;
+        width: 40rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .specialty .swiper .swiper-scrollbar {
+    margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .shareRecipe .shareCon img {
+    width: 26rem;
+  }
+}

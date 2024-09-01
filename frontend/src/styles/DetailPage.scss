@@ -1,0 +1,97 @@
+@import '../styles/App.scss';
+
+main {
+  h2 {
+    text-align: center;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .author {
+      font-size: $font-size-large;
+      font-family: Baskerville;
+      color: $color-primary;
+    }
+  }
+
+  .bgImg {
+    background-color: $color-grey;
+    height: auto; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    img {
+      max-width: 100%; 
+      height: auto; 
+      display: block; 
+      margin: 0 auto;
+    }
+  }
+
+  .summaryCon {
+    margin: 6rem 0;
+    background-color: $color-secondary;
+    padding: 0 4rem;
+    padding-bottom: 4rem;
+
+    .summaryTitle {
+      display: inline-flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: $color-primary;
+      color: white;
+    }
+    .summary {
+      padding-top: 2rem;
+      text-align: center;
+    }
+  }
+
+  .contentBtns {
+    text-align: center;
+    margin: 6rem;
+  }
+
+  .contentBtns > button {
+    width: 10rem;
+  }
+
+  .editBtn {
+    margin-right: 4rem;
+  }
+
+  section.btns {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 773px) {
+  .bgImg {
+    height: auto;
+  }
+
+  .bgImg img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+  }
+}
+
+@media (max-width: 500px) {
+  main .contentBtns {
+    flex-direction: column;
+    display: flex;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  main .contentBtns > button {
+    width: 100%;
+  }
+}
