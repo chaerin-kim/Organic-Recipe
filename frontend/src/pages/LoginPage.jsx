@@ -84,7 +84,7 @@ const LoginPage = () => {
         <button type="submit" className="btn-secondary">
           Sign in
         </button>
-        <div className="socialLogin">{/* <KakaoLogin/> */}</div>
+        {/* <div className="socialLogin"><KakaoLogin/></div> */}
       </form>
 
       <div className="registerBox">

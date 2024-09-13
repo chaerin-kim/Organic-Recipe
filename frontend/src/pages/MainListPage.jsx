@@ -22,18 +22,24 @@ const MainListPage = () => {
       });
   }, []);
 
+  // console.log(postList);
+  
+
   return (
     <>
+      {/* 메인 슬라이드 */}
       <Slide />
 
+      {/* NEW RECIPES 섹션 */}
       <main className="mw mainList">
         <p className="subTitle">NEW RECIPES</p>
 
         <div className="postsCon">
-          {postList.map((post) => (
+          {postList.slice(0, 6).map((post) => (
             <PostCard key={post._id} post={post} />
           ))}
         </div>
+
         <button
           className="btn-primary more"
           onClick={() => navigate('/recipes')}
@@ -42,6 +48,7 @@ const MainListPage = () => {
         </button>
       </main>
 
+      {/* specialty 섹션 */}
       <section className="specialty">
         <div className="spcialtyTitle">
           <h2>
@@ -54,6 +61,7 @@ const MainListPage = () => {
         </div>
       </section>
 
+      {/* shareRecipe 섹션 */}
       <section className="shareRecipe ">
         <div className="mw shareCon">
           <div className="shareTxt">
@@ -77,6 +85,7 @@ const MainListPage = () => {
         </div>
       </section>
 
+      {/* mealKit 섹션 */}
       <section className="mealKit ">
         <div className="mw mealKitCon">
           <h2>

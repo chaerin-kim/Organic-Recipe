@@ -5,10 +5,12 @@ import { url } from '../store/ref';
 const PostCard = ({ post }) => {
   const navigate = useNavigate();
   const date = new Date(post.createdAt);
-  const day = date.toLocaleDateString();
-  const time = date.toLocaleTimeString([], {
+  const day = date.toLocaleDateString('en-US'); // AM/PM 형식을 위해 변경
+  const time = date.toLocaleTimeString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
+    hour12: true, // 12시간제 사용
+    hourCycle: 'h12', // AM/PM 형식
   });
 
   return (
@@ -31,4 +33,5 @@ const PostCard = ({ post }) => {
     </article>
   );
 };
+
 export default PostCard;

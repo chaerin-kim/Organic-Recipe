@@ -42,7 +42,7 @@ const DetailPage = () => {
       });
   };
 
-  console.log('postinfo', postInfo);
+  // console.log('postinfo', postInfo);
 
   return (
     <main className="mw detail">
