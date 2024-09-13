@@ -1,5 +1,10 @@
 # 🥗 Organic Recipe Sharing Platform
 
+![OKR Sumnail](https://github.com/user-attachments/assets/a596613e-d144-45e2-9426-31dde63f3388)
+
+
+---
+
 ![Main Page](https://github.com/user-attachments/assets/2e11ebd3-7214-447c-8b1d-82655cdb7e64)
 
 ---
