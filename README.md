@@ -36,6 +36,13 @@
 <br>
 <br>
 
+## 🌐 Custom Proxy Server
+- **Proxy Port**: The proxy server listens on `http://localhost:3001` and forwards requests to the backend on `http://localhost:8002`.
+- **Improved Security**: It provides a layer of security by acting as a middleman, preventing the frontend from directly accessing the backend.
+- **CORS Handling**: Resolves CORS issues by routing requests through the proxy.
+
+<br><br><br>
+
 ## 🌟 Main Features
 <br>
 
