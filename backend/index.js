@@ -143,13 +143,33 @@ app.post('/postWrite', upload.single('files'), (req, res) => {
   });
 });
 
-//postList
+// 기존 전체 게시물 리스트 가져오기
 app.get('/postList', async (req, res) => {
-  // console.log('요청');
-  const postlist = await Post.find().sort({ createdAt: -1 });
-  res.json(postlist);
-  // console.log(postlist);
+  try {
+    const postlist = await Post.find().sort({ createdAt: -1 });
+    res.json(postlist);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
+
+// /postList/search (백엔드에서 검색 처리)
+app.get('/postList/search', async (req, res) => {
+  const query = req.query.query; // 쿼리 파라미터로 검색어 받음
+  if (!query) {
+    return res.json([]);
+  }
+
+  try {
+    // 제목에 검색어가 포함된 포스트 찾기 (대소문자 구분 없이 검색)
+    const filteredPosts = await Post.find({ title: { $regex: query, $options: 'i' } });
+    res.json(filteredPosts);
+  } catch (error) {
+    console.error('Error fetching search results:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 //상세페이지 정보 요청
 app.get('/postDetail/:id', async (req, res) => {
