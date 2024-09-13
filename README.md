@@ -9,6 +9,7 @@
 
 ## 🛠️ How to Run the Project  
 <br>
+
 1. Navigate to the `frontend` folder and run the following commands: 
    
    ```bash
@@ -17,12 +18,20 @@
       ```
 
 
-3. Navigate to the backend folder and start the server with: 
+2. Navigate to the `backend` folder and start the server with: 
    
    ```bash
    cd backend
    nodemon index.js
+   ```
+
+3. Navigate to the `custom-proxy-server` folder and start the server with: 
+   
+   ```bash
+   cd custom-proxy-server
+   nodemon index.js
    ```  
+
 <br>
 <br>
 <br>
