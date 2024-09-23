@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 let user = createSlice({
-  name: 'user', // 문자열로~~!!
+  name: 'user', 
   initialState: {
     user: null,
   },

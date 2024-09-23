@@ -4,6 +4,6 @@ import user from './userStore'
 
 export const store = configureStore({
   reducer: {
-    user: user.reducer, // 추가 안했음~~~
+    user: user.reducer, 
   },
 })

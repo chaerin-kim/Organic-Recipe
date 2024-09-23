@@ -84,8 +84,15 @@ const CommentsLi = ({
 
           {userName === comment.author ? (
             <div>
-              <button onClick={editComment}>수정</button>
-              <button onClick={deleteComment}>삭제</button>
+              <button className={`${style.btnSecondary}`} onClick={editComment}>
+                수정
+              </button>
+              <button
+                className={`${style.btnSecondary}`}
+                onClick={deleteComment}
+              >
+                삭제
+              </button>
             </div>
           ) : (
             <div className={style.listBtns}>

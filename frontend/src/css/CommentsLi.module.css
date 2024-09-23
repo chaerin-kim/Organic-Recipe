@@ -6,15 +6,19 @@
   padding: 2rem;
 }
 
-.listBtns button {
+.btnSecondary {
   margin: 2rem 2rem 0 0;
-  width: 10rem;
-  height: 4rem;
+  width: 8rem;
+  height: 3rem;
+  background-color: #333333;
+  color: #ffffff;
 }
-.btn-secondary.disabled {
-  background-color: grey;
-  color: white;
+.btnSecondary.disabled {
+  background-color: #E0E0E0;
+  color: #A8A8A8;
 }
+
+
 
 .content {
   flex: 1;

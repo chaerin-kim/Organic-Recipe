@@ -117,7 +117,7 @@ app.post('/logout', (req, res) => {
 
 //postWrite
 app.post('/postWrite', upload.single('files'), (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   // console.log(req.file);
   const { path, originalname } = req.file;
   const part = originalname.split('.');
@@ -181,7 +181,7 @@ app.get('/postDetail/:id', async (req, res) => {
 //포스트 삭제 요청 기능
 app.delete('/deletePost/:id', async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+  // console.log(id);
   await Post.findByIdAndDelete(id);
   res.json({ message: 'ok' });
 });
@@ -226,7 +226,7 @@ app.put('/editPost/:id', upload.single('files'), (req, res) => {
 
 ///commentAdd 댓글 정보를 formData로 받을 때
 app.post('/commentAdd', upload.none(), (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { token } = req.cookies;
   if (!token) {
     return res.status(401).json({ message: '인증토큰없음' });
